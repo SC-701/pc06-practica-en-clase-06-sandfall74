@@ -13,6 +13,7 @@ namespace Flujo
 
         public VehiculoFLujo(IVehiculoDA vehiculoDA, IRegistroReglas reglas, IRevisionReglas revisionReglas)
         {
+            //hola
             _VehiculoDA = vehiculoDA;
             _reglas = reglas;
             _revisionReglas = revisionReglas;
