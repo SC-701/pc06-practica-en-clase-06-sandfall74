@@ -94,17 +94,17 @@ namespace DA
             return resultadoConsulta;
         }
 
-        public async Task<IEnumerable<VehiculoDetalle>> Obtener()
+        public async Task<IEnumerable<VehiculoResponse>> Obtener()
         {
             string query = @"ObetenrVehiculos";
-            var resultadoConsulta =  await _sqlConnection.QueryAsync<VehiculoDetalle>(query);
+            var resultadoConsulta =  await _sqlConnection.QueryAsync<VehiculoResponse>(query);
             return resultadoConsulta;
         }
 
-        public async Task<VehiculoResponse> ObtenerPorId(Guid id)
+        public async Task<VehiculoDetalle> ObtenerPorId(Guid id)
         {
             string query = @"ObetenrVehiculo";
-            var resultadoConsulta = await _sqlConnection.QueryAsync<VehiculoResponse>(query, new {Id=id});
+            var resultadoConsulta = await _sqlConnection.QueryAsync<VehiculoDetalle>(query, new {Id=id});
             return resultadoConsulta.FirstOrDefault();
         }
     }
