@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE AgregarVehiculo
-	-- Add the parameters for the stored procedure here
+	-- Add the parameters for the stored procedure here''
 	@Id AS uniqueidentifier
 ,@IdModelo AS uniqueidentifier
 ,@Placa AS varchar(max)
