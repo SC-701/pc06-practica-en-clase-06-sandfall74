@@ -96,14 +96,14 @@ namespace DA
 
         public async Task<IEnumerable<VehiculoResponse>> Obtener()
         {
-            string query = @"ObetenrVehiculos";
+            string query = @"ObtenerVehiculos";
             var resultadoConsulta =  await _sqlConnection.QueryAsync<VehiculoResponse>(query);
             return resultadoConsulta;
         }
 
         public async Task<VehiculoDetalle> ObtenerPorId(Guid id)
         {
-            string query = @"ObetenrVehiculo";
+            string query = @"ObtenerVehiculo";
             var resultadoConsulta = await _sqlConnection.QueryAsync<VehiculoDetalle>(query, new {Id=id});
             return resultadoConsulta.FirstOrDefault();
         }
