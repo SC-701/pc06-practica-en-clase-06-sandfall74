@@ -26,6 +26,10 @@ builder.Services.AddScoped<IRevisionServicio, RevisionServicio>();
 builder.Services.AddScoped<IConfiguracion, Configuracion>();
 builder.Services.AddScoped<IRevisionReglas, RevisionReglas>();
 builder.Services.AddScoped<IRegistroReglas,RegistroReglas>();
+builder.Services.AddScoped<IMarcaDA, MarcaDA>();
+builder.Services.AddScoped<IModeloDA, ModeloDA>();
+builder.Services.AddScoped<IMarcaFlujo, MarcaFlujo>();
+builder.Services.AddScoped<IModeloFlujo, ModeloFlujo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
