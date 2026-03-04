@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/vehiculo")]
     [ApiController]
     public class VehiculoController : ControllerBase, IVehiculoController
     {
