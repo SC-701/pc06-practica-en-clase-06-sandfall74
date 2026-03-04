@@ -11,7 +11,7 @@
 name: Build and deploy Web App
 
 env:
-  AZURE_WEBAPP_NAME: AppWebPractica5    # Change this to your Azure Web App name
+  AZURE_WEBAPP_NAME: websc701 - Web Deploy    # Change this to your Azure Web App name
   AZURE_WEBAPP_PACKAGE_PATH: './Vehiculos.WEB'
   DOTNET_VERSION: '8.0'
 
