@@ -17,16 +17,18 @@ namespace DA
             _sqlConnection = _repositorioDapper.ObtenerRepositorio();
         }
 
-        #region Operaciones
+       
 
-        public async Task<IEnumerable<Modelo>> Obtener(Guid IdMarca)
+        public async Task<IEnumerable<Modelo>> Obtener(Guid IdMarca )
         {
             string query = @"ObtenerModelos";
+
             var resultadoConsulta = await _sqlConnection.QueryAsync<Modelo>(query,
-                new { IdMarca = IdMarca });
+            new { IdMarca = IdMarca });
             return resultadoConsulta;
         }
-        #endregion
+
+
 
     }
 }
