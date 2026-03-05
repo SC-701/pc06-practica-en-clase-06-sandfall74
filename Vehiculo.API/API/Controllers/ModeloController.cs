@@ -20,6 +20,7 @@ namespace API.Controllers
 
 
 
+
         [HttpGet("{IdMarca}")]
         public async Task<IActionResult> Obtener(Guid IdMarca )
         {
