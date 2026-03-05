@@ -13,6 +13,9 @@ namespace Flujo
         {
             _modeloDA = modeloDA;
         }
+
+
+
         public async Task<IEnumerable<Modelo>> Obtener(Guid IdMarca)
         {
             return await _modeloDA.Obtener(IdMarca);

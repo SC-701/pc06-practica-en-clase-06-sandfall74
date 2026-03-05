@@ -17,16 +17,19 @@ namespace API.Controllers
             _modeloFlujo = modeloFLujo;
             _logger = logger;
         }
-        #region Operaciones
+
+
+
         [HttpGet("{IdMarca}")]
-        public async Task<IActionResult> Obtener(Guid IdMarca)
+        public async Task<IActionResult> Obtener(Guid IdMarca )
         {
             var resultado = await _modeloFlujo.Obtener(IdMarca);
+
             if (!resultado.Any())
                 return NoContent();
+
             return Ok(resultado);
         }
-        #endregion Operaciones
 
     }
 }

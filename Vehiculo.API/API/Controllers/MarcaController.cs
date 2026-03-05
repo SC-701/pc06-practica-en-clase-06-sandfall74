@@ -17,16 +17,19 @@ namespace API.Controllers
             _marcaFlujo = marcaFLujo;
             _logger = logger;
         }
-        #region Operaciones
+       
         [HttpGet]
         public async Task<IActionResult> Obtener()
         {
             var resultado = await _marcaFlujo.Obtener();
+
+
             if (!resultado.Any())
                 return NoContent();
+
+
             return Ok(resultado);
         }
-        #endregion Operaciones
 
     }
 }
